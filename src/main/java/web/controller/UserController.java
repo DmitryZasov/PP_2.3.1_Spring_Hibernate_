@@ -29,7 +29,7 @@ public class UserController {
 
     @GetMapping("/show")
     public String userById(@RequestParam("id") int id, Model model) {
-        model.addAttribute("user", userService.findUser(id));
+        model.addAttribute("user", userService.readUser(id));
         return "userID";
     }
 
@@ -51,7 +51,7 @@ public class UserController {
 
     @GetMapping("/edit")
     public String editUserById(@RequestParam("id") int id, Model model) {
-        model.addAttribute("user", userService.findUser(id));
+        model.addAttribute("user", userService.readUser(id));
         return "edit";
     }
 

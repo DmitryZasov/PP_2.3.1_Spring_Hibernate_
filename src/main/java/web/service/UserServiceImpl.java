@@ -26,8 +26,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(readOnly = true)
-    public User findUser(int id) {
-        return userDAO.findUser(id);
+    public User readUser(int id) {
+        return userDAO.readUser(id);
     }
 
     @Override

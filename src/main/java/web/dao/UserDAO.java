@@ -7,7 +7,7 @@ import web.model.User;
 public interface UserDAO {
     void addUser(User user);
 
-    User findUser(int id);
+    User readUser(int id);
 
     void editUserById(User user);
 

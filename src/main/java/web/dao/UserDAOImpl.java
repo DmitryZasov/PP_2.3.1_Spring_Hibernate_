@@ -22,13 +22,14 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public User findUser(int id) {
+    public User readUser(int id) {
         return em.find(User.class, id);
     }
 
     @Override
     public void editUserById(User user) {
-        em.merge(user);
+        User newUser = em.merge(user);
+        user.setId(newUser.getId());
     }
 
     @Override
