@@ -39,7 +39,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public List<User> getAllUsers() {
+    public List<User> readingAllUsers() {
         return em.createQuery("from User", User.class).getResultList();
     }
 }

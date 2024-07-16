@@ -13,6 +13,6 @@ public interface UserDAO {
 
     void removeUserById(int id);
 
-    List<User> getAllUsers();
+    List<User> readingAllUsers();
 
 }
